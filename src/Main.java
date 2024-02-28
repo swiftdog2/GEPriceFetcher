@@ -9,12 +9,11 @@ import java.net.URL;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-
     private static final String API_BASE_URL = "https://prices.runescape.wiki/api/v1/osrs/latest?id=";
 
     public static void main(String args[]) {
         try {
-            GEPrice priceInfo = Main.fetchGEPrice(563); // Replace with your desired Item ID
+            GEPrice priceInfo = Main.fetchGEPrice(ItemID.LAW_RUNE);
             System.out.println("High price: " + priceInfo.getHigh());
         } catch (Exception e) {
             System.err.println("Error fetching price data: " + e.getMessage());
